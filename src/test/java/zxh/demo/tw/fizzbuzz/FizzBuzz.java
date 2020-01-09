@@ -7,6 +7,10 @@ package zxh.demo.tw.fizzbuzz;
 */
 public class FizzBuzz {
     public static String fizzBuzz(int input) {
+        if (isMultipleOf3(input) && isMultipleOf5(input) && isMultipleOf7(input)) {
+            return "FizzBuzzWhizz";
+        }
+
         if (isMultipleOf3(input) && isMultipleOf5(input)) {
             return "FizzBuzz";
         }
