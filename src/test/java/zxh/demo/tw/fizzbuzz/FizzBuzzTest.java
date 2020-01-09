@@ -32,7 +32,7 @@ public class FizzBuzzTest {
 
     @Test
     public void should_return_buzzwhizz_when_input_multiple_5_7() {
-        assertEquals("BuzzWhizz", FizzBuzz.fizzBuzz(35));
+        assertEquals("BuzzWhizz", FizzBuzz.fizzBuzz(70));
     }
 
     @Test
@@ -43,5 +43,30 @@ public class FizzBuzzTest {
     @Test
     public void should_fizzbuzzwhizz_when_input_multiple_of_3_5_7() {
         assertEquals("FizzBuzzWhizz", FizzBuzz.fizzBuzz(105));
+    }
+
+    @Test
+    public void should_return_fizz_when_input_contains_3() {
+        assertEquals("Fizz", FizzBuzz.fizzBuzz(13));
+    }
+
+    @Test
+    public void should_return_fizz_when_input_contains_3_and_multiple_of_3() {
+        assertEquals("Fizz", FizzBuzz.fizzBuzz(33));
+    }
+
+    @Test
+    public void should_return_fizz_when_input_contains_3_and_multiple_of_5() {
+        assertEquals("Fizz", FizzBuzz.fizzBuzz(135));
+    }
+
+    @Test
+    public void should_return_fizz_when_input_contains_3_and_multiple_of_7() {
+        assertEquals("Fizz", FizzBuzz.fizzBuzz(63));
+    }
+
+    @Test
+    public void should_return_fizz_when_input_contains_3_and_multiple_of_5_7() {
+        assertEquals("Fizz", FizzBuzz.fizzBuzz(35));
     }
 }
