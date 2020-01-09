@@ -11,6 +11,10 @@ public class FizzBuzz {
             return "FizzBuzz";
         }
 
+        if (isMultipleOf5(input) && isMultipleOf7(input)) {
+            return "BuzzWhizz";
+        }
+
         if (isMultipleOf3(input)) {
             return "Fizz";
         }
