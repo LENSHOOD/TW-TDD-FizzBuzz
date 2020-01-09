@@ -7,8 +7,8 @@ package zxh.demo.tw.fizzbuzz;
 */
 public class FizzBuzz {
     public static String fizzBuzz(int input) {
-        if (String.valueOf(input).contains("7")) {
-            if (String.valueOf(input).contains("3")) {
+        if (isContains7(input)) {
+            if (isContains3(input)) {
                 return "Fizz";
             } else if (isMultipleOf3(input) && isMultipleOf7(input)) {
                 return "FizzWhizz";
@@ -19,7 +19,7 @@ public class FizzBuzz {
             }
         }
 
-        if (String.valueOf(input).contains("5")) {
+        if (isContains5(input)) {
             if (isMultipleOf5(input) && isMultipleOf7(input)) {
                 return "BuzzWhizz";
             } else if (isMultipleOf7(input)) {
@@ -29,7 +29,7 @@ public class FizzBuzz {
             }
         }
 
-        if (String.valueOf(input).contains("3")) {
+        if (isContains3(input)) {
             return "Fizz";
         }
 
@@ -62,6 +62,18 @@ public class FizzBuzz {
         }
 
         return null;
+    }
+
+    private static boolean isContains5(int input) {
+        return String.valueOf(input).contains("5");
+    }
+
+    private static boolean isContains3(int input) {
+        return String.valueOf(input).contains("3");
+    }
+
+    private static boolean isContains7(int input) {
+        return String.valueOf(input).contains("7");
     }
 
     private static boolean isMultipleOf7(int input) {
