@@ -11,32 +11,6 @@ public class FizzBuzz {
     private static final String WHIZZ = "Whizz";
 
     public static String fizzBuzz(int input) {
-        if (isContains7(input)) {
-            if (isContains3(input)) {
-                return "Fizz";
-            } else if (isMultipleOf3(input) && isMultipleOf7(input)) {
-                return "FizzWhizz";
-            } else if (isMultipleOf7(input)) {
-                return "Whizz";
-            } else if (isMultipleOf3(input)) {
-                return "Fizz";
-            }
-        }
-
-        if (isContains5(input)) {
-            if (isMultipleOf5(input) && isMultipleOf7(input)) {
-                return "BuzzWhizz";
-            } else if (isMultipleOf7(input)) {
-                return "Whizz";
-            } else if (isMultipleOf5(input)) {
-                return "Buzz";
-            }
-        }
-
-        if (isContains3(input)) {
-            return "Fizz";
-        }
-
         String result = "";
 
         if (isMultipleOf3(input)) {
@@ -49,6 +23,23 @@ public class FizzBuzz {
 
         if (isMultipleOf7(input)) {
             result += WHIZZ;
+        }
+
+        if (isContains7(input)) {
+            result = result.replace(BUZZ, "");
+            if (isContains3(input)) {
+                return FIZZ;
+            }
+
+            return result;
+        }
+
+        if (isContains5(input)) {
+            return result.replace(FIZZ, "");
+        }
+
+        if (isContains3(input)) {
+            return FIZZ;
         }
 
         if (result.length() == 0) {
