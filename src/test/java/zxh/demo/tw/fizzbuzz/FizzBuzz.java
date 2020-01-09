@@ -7,6 +7,10 @@ package zxh.demo.tw.fizzbuzz;
 */
 public class FizzBuzz {
     public static String fizzBuzz(int input) {
+        if (input % 3 ==0 && input % 5 == 0) {
+            return "FizzBuzz";
+        }
+
         if (input % 3 == 0) {
             return "Fizz";
         }
