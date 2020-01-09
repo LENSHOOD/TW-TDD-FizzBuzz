@@ -94,4 +94,9 @@ public class FizzBuzzTest {
     public void should_return_buzz_when_input_contains_7_3() {
         assertEquals("Fizz", FizzBuzz.fizzBuzz(37));
     }
+
+    @Test
+    public void should_return_itself_when_input_others() {
+        assertEquals("4", FizzBuzz.fizzBuzz(4));
+    }
 }

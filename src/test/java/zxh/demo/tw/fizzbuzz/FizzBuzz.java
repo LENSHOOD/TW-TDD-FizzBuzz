@@ -61,7 +61,7 @@ public class FizzBuzz {
             return "Whizz";
         }
 
-        return null;
+        return String.valueOf(input);
     }
 
     private static boolean isContains5(int input) {
