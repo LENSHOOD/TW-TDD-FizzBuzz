@@ -6,6 +6,10 @@ package zxh.demo.tw.fizzbuzz;
  * @date 2020/1/10
 */
 public class FizzBuzz {
+    private static final String FIZZ = "Fizz";
+    private static final String BUZZ = "Buzz";
+    private static final String WHIZZ = "Whizz";
+
     public static String fizzBuzz(int input) {
         if (isContains7(input)) {
             if (isContains3(input)) {
@@ -33,35 +37,25 @@ public class FizzBuzz {
             return "Fizz";
         }
 
-        if (isMultipleOf3(input) && isMultipleOf5(input) && isMultipleOf7(input)) {
-            return "FizzBuzzWhizz";
-        }
-
-        if (isMultipleOf3(input) && isMultipleOf5(input)) {
-            return "FizzBuzz";
-        }
-
-        if (isMultipleOf5(input) && isMultipleOf7(input)) {
-            return "BuzzWhizz";
-        }
-
-        if (isMultipleOf3(input) && isMultipleOf7(input)) {
-            return "FizzWhizz";
-        }
+        String result = "";
 
         if (isMultipleOf3(input)) {
-            return "Fizz";
+            result += FIZZ;
         }
 
         if (isMultipleOf5(input)) {
-            return "Buzz";
+            result += BUZZ;
         }
 
         if (isMultipleOf7(input)) {
-            return "Whizz";
+            result += WHIZZ;
         }
 
-        return String.valueOf(input);
+        if (result.length() == 0) {
+            return String.valueOf(input);
+        }
+
+        return result;
     }
 
     private static boolean isContains5(int input) {
