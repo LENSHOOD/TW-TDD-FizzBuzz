@@ -34,4 +34,9 @@ public class FizzBuzzTest {
     public void should_return_buzzwhizz_when_input_multiple_5_7() {
         assertEquals("BuzzWhizz", FizzBuzz.fizzBuzz(35));
     }
+
+    @Test
+    public void should_return_fizzwhizz_when_input_multiple_3_7() {
+        assertEquals("FizzWhizz", FizzBuzz.fizzBuzz(21));
+    }
 }
