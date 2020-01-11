@@ -19,4 +19,9 @@ public class FizzBuzzTest {
     public void should_return_buzz_when_multiple_5() {
         assertEquals("Buzz", FizzBuzz.fizzBuzz(10));
     }
+
+    @Test
+    public void should_return_whizz_when_multiple_7() {
+        assertEquals("Whizz", FizzBuzz.fizzBuzz(14));
+    }
 }
