@@ -7,34 +7,32 @@ package zxh.demo.tw.fizzbuzz;
 */
 public class FizzBuzz {
     public static String fizzBuzz(int i) {
-        if (i % 3 == 0 && i % 5 == 0 && i % 7 == 0) {
-            return "FizzBuzzWhizz";
+        String result = "";
+
+        if (isMultipleOf3(i)) {
+            result +=  "Fizz";
         }
 
-        if (i % 3 == 0 && i % 5 == 0) {
-            return "FizzBuzz";
+        if (isMultipleOf5(i)) {
+            result +=  "Buzz";
         }
 
-        if (i % 5 == 0 && i % 7 == 0) {
-            return "BuzzWhizz";
+        if (isMultipleOf7(i)) {
+            result +=  "Whizz";
         }
 
-        if (i % 3 == 0 && i % 7 == 0) {
-            return "FizzWhizz";
-        }
+        return result;
+    }
 
-        if (i % 3 == 0) {
-            return "Fizz";
-        }
+    private static boolean isMultipleOf7(int i) {
+        return i % 7 == 0;
+    }
 
-        if (i % 5 == 0) {
-            return "Buzz";
-        }
+    private static boolean isMultipleOf5(int i) {
+        return i % 5 == 0;
+    }
 
-        if (i % 7 == 0) {
-            return "Whizz";
-        }
-
-        return null;
+    private static boolean isMultipleOf3(int i) {
+        return i % 3 == 0;
     }
 }
