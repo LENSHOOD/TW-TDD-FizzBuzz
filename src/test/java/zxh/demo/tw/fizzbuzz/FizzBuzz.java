@@ -23,13 +23,7 @@ public class FizzBuzz {
 
         if (isContains7(i)) {
             result = result.replace("Buzz", "");
-            if (isContains3(i)) {
-                result = "Fizz";
-            }
-            return getResult(result, i);
-        }
-
-        if (isContains5(i)) {
+        } else if (isContains5(i)) {
             result = result.replace("Fizz", "");
             return getResult(result, i);
         }
@@ -38,7 +32,7 @@ public class FizzBuzz {
             return "Fizz";
         }
 
-        return result;
+        return getResult(result, i);
     }
 
     private static String getResult(String result, int defaultNumber) {
