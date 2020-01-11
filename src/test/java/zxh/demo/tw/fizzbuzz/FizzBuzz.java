@@ -26,18 +26,12 @@ public class FizzBuzz {
             if (isContains3(i)) {
                 result = "Fizz";
             }
-            if (result.length() == 0) {
-                return String.valueOf(i);
-            }
-            return result;
+            return getResult(result, i);
         }
 
         if (isContains5(i)) {
             result = result.replace("Fizz", "");
-            if (result.length() == 0) {
-                return String.valueOf(i);
-            }
-            return result;
+            return getResult(result, i);
         }
 
         if (isContains3(i)) {
@@ -47,27 +41,42 @@ public class FizzBuzz {
         return result;
     }
 
+    private static String getResult(String result, int defaultNumber) {
+        if (result.length() == 0) {
+            return String.valueOf(defaultNumber);
+        }
+        return result;
+    }
+
     private static boolean isContains7(int i) {
-        return String.valueOf(i).contains("7");
+        return isContains(i, "7");
     }
 
     private static boolean isContains5(int i) {
-        return String.valueOf(i).contains("5");
+        return isContains(i, "5");
     }
 
     private static boolean isContains3(int i) {
-        return String.valueOf(i).contains("3");
+        return isContains(i, "3");
+    }
+
+    private static boolean isContains(int i, String s) {
+        return String.valueOf(i).contains(s);
     }
 
     private static boolean isMultipleOf7(int i) {
-        return i % 7 == 0;
+        return isMultipleOf(i, 7);
     }
 
     private static boolean isMultipleOf5(int i) {
-        return i % 5 == 0;
+        return isMultipleOf(i, 5);
     }
 
     private static boolean isMultipleOf3(int i) {
-        return i % 3 == 0;
+        return isMultipleOf(i, 3);
+    }
+
+    private static boolean isMultipleOf(int i, int i2) {
+        return i % i2 == 0;
     }
 }
