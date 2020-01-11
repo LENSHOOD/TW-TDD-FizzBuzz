@@ -27,7 +27,7 @@ public class FizzBuzzTest {
 
     @Test
     public void should_return_fizzbuzz_when_multiple_3_5() {
-        assertEquals("FizzBuzz", FizzBuzz.fizzBuzz(15));
+        assertEquals("FizzBuzz", FizzBuzz.fizzBuzz(60));
     }
 
     @Test
@@ -42,7 +42,7 @@ public class FizzBuzzTest {
 
     @Test
     public void should_return_fizzbuzzwhizz_when_multiple_3_5_7() {
-        assertEquals("FizzBuzzWhizz", FizzBuzz.fizzBuzz(105));
+        assertEquals("FizzBuzzWhizz", FizzBuzz.fizzBuzz(210));
     }
 
     @Test
@@ -50,5 +50,12 @@ public class FizzBuzzTest {
         assertEquals("Fizz", FizzBuzz.fizzBuzz(13));
         assertEquals("Fizz", FizzBuzz.fizzBuzz(30));
         assertEquals("Fizz", FizzBuzz.fizzBuzz(33));
+    }
+
+    @Test
+    public void should_return_result_not_contains_buzz_when_contains_5() {
+        assertEquals("BuzzWhizz", FizzBuzz.fizzBuzz(35));
+        assertEquals("53", FizzBuzz.fizzBuzz(53));
+        assertEquals("Buzz", FizzBuzz.fizzBuzz(45));
     }
 }

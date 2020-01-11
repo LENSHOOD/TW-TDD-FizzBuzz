@@ -9,10 +9,6 @@ public class FizzBuzz {
     public static String fizzBuzz(int i) {
         String result = "";
 
-        if (isContains3(i)) {
-            return "Fizz";
-        }
-
         if (isMultipleOf3(i)) {
             result +=  "Fizz";
         }
@@ -25,7 +21,23 @@ public class FizzBuzz {
             result +=  "Whizz";
         }
 
+        if (isContains5(i)) {
+            result = result.replace("Fizz", "");
+            if (result.length() == 0) {
+                return String.valueOf(i);
+            }
+            return result;
+        }
+
+        if (isContains3(i)) {
+            return "Fizz";
+        }
+
         return result;
+    }
+
+    private static boolean isContains5(int i) {
+        return String.valueOf(i).contains("5");
     }
 
     private static boolean isContains3(int i) {
