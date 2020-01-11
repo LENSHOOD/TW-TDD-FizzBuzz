@@ -13,6 +13,7 @@ TW TDD Training Lesson 1 - FizzBuzz
 - i contains 5, return value cannot include Fizz
 - i contains 7 and not contains 3, return value cannot include Buzz
 - i contains 7 and contains 3, return Fizz
+- others, return itself
 
 ### Note
 We assume that there is a for-loop outside to iterate 1 to 120, and the code logic only contains the implementation of method fizzBuzz(i).
@@ -26,3 +27,5 @@ for( int i = 0; i < 120; i++) {
 ### Record
 1. first time
     - 1 h 35 min
+2. second time
+    - 30 min
