@@ -10,13 +10,8 @@ TW TDD Training Lesson 1 - FizzBuzz
 - i is multiple of both 7 and 3, return FizzWhizz
 - i is multiple of 3, 5 and 7, return FizzBuzzWhizz
 - i contains 3, return Fizz
-- i contains 3, multiple of any number, return Fizz
-- i contains 5 and multiple of 5, return Buzz
-- i contains 5 and multiple of 7, return Whizz
-- i contains 5 and multiple of 5 and 7, return BuzzWhizz
-- i contains 7 and multiple of 3, return Fizz
-- i contains 7 and multiple of 7, return Whizz
-- i contains 7 and multiple of 3 and 7, return FizzWhizz
+- i contains 5, return value cannot include Fizz
+- i contains 7 and not contains 3, return value cannot include Buzz
 - i contains 7 and contains 3, return Fizz
 
 ### Note
@@ -27,3 +22,7 @@ for( int i = 0; i < 120; i++) {
     System.out.println(result);
 }
 ```
+
+### Record
+1. first time
+    - 1 h 35 min
