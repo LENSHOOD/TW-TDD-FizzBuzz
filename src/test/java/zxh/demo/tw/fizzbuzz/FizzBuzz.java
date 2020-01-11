@@ -21,6 +21,17 @@ public class FizzBuzz {
             result +=  "Whizz";
         }
 
+        if (isContains7(i)) {
+            result = result.replace("Buzz", "");
+            if (isContains3(i)) {
+                result = "Fizz";
+            }
+            if (result.length() == 0) {
+                return String.valueOf(i);
+            }
+            return result;
+        }
+
         if (isContains5(i)) {
             result = result.replace("Fizz", "");
             if (result.length() == 0) {
@@ -34,6 +45,10 @@ public class FizzBuzz {
         }
 
         return result;
+    }
+
+    private static boolean isContains7(int i) {
+        return String.valueOf(i).contains("7");
     }
 
     private static boolean isContains5(int i) {
