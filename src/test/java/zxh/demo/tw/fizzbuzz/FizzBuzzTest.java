@@ -24,4 +24,24 @@ public class FizzBuzzTest {
     public void should_return_whizz_when_multiple_7() {
         assertEquals("Whizz", FizzBuzz.fizzBuzz(14));
     }
+
+    @Test
+    public void should_return_fizzbuzz_when_multiple_3_5() {
+        assertEquals("FizzBuzz", FizzBuzz.fizzBuzz(15));
+    }
+
+    @Test
+    public void should_return_buzzwhizz_when_multiple_5_7() {
+        assertEquals("BuzzWhizz", FizzBuzz.fizzBuzz(35));
+    }
+
+    @Test
+    public void should_return_fizzwhizz_when_multiple_3_7() {
+        assertEquals("FizzWhizz", FizzBuzz.fizzBuzz(21));
+    }
+
+    @Test
+    public void should_return_fizzbuzzwhizz_when_multiple_3_5_7() {
+        assertEquals("FizzBuzzWhizz", FizzBuzz.fizzBuzz(105));
+    }
 }
