@@ -29,3 +29,5 @@ for( int i = 0; i < 120; i++) {
     - 1 h 35 min
 2. second time
     - 30 min
+3. third ti,e
+    - 24min
