@@ -25,14 +25,20 @@ public class FizzBuzz {
         if (isContains7(i)) {
             result = result.replace("Buzz", "");
         } else if (isContains5(i)) {
-            return result.replace("Fizz", "");
+            result = result.replace("Fizz", "");
+            return getResult(i, result);
         }
 
         if (isContains3(i)) {
-            return "Fizz";
+            result = "Fizz";
+            return getResult(i, result);
         }
 
-        return result;
+        return getResult(i, result);
+    }
+
+    private static String getResult(int i, String result) {
+        return result.length() == 0 ? String.valueOf(i) : result;
     }
 
     private static boolean isContains7(int i) {

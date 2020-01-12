@@ -63,4 +63,11 @@ public class FizzBuzzTest {
         assertEquals("Fizz", FizzBuzz.fizzBuzz(37));
         assertEquals("Whizz", FizzBuzz.fizzBuzz(70));
     }
+
+    @Test
+    public void should_return_itself_when_others_case() {
+        assertEquals("53", FizzBuzz.fizzBuzz(53));
+        assertEquals("17", FizzBuzz.fizzBuzz(17));
+        assertEquals("11", FizzBuzz.fizzBuzz(11));
+    }
 }
