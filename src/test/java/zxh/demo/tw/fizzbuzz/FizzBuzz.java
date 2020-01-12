@@ -22,7 +22,29 @@ public class FizzBuzz {
             result += "Whizz";
         }
 
+        if (isContains7(i)) {
+            result = result.replace("Buzz", "");
+        } else if (isContains5(i)) {
+            return result.replace("Fizz", "");
+        }
+
+        if (isContains3(i)) {
+            return "Fizz";
+        }
+
         return result;
+    }
+
+    private static boolean isContains7(int i) {
+        return String.valueOf(i).contains("7");
+    }
+
+    private static boolean isContains5(int i) {
+        return String.valueOf(i).contains("5");
+    }
+
+    private static boolean isContains3(int i) {
+        return String.valueOf(i).contains("3");
     }
 
     private static boolean isMultipleOf7(int i) {
